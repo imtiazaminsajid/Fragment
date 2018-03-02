@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 FragmentOne fragmentOne = new FragmentOne();
                 fragmentTransaction.replace(R.id.framelayout, fragmentOne);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case R.id.fragmentTwo:
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransactionTwo = fragmentManagerTwo.beginTransaction();
                 FragmentTwo fragmentTwo = new FragmentTwo();
                 fragmentTransactionTwo.replace(R.id.framelayout, fragmentTwo);
+                fragmentTransactionTwo.addToBackStack(null);
                 fragmentTransactionTwo.commit();
                 break;
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransactionThree = fragmentManagerThree.beginTransaction();
                 FragmentThree fragmentThree= new FragmentThree();
                 fragmentTransactionThree.replace(R.id.framelayout, fragmentThree);
+                fragmentTransactionThree.addToBackStack(null);
                 fragmentTransactionThree.commit();
                 break;
         }
